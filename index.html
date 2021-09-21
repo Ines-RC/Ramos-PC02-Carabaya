@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CARABAYA COMO LUGAR TURÍTICO</title>
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    
+    crossorigin="anonymous">
+
+        <!----------------------------------------------->
+        <title>Slider CSS - A Slider only with CSS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+        <!------------------------------->
+    <!------------------------------------------------   CARRUSEL  ------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+        
+        $(document).ready(function() {
+            var numImages = 12;
+            if (numImages <= 6) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+        
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 6;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            });
+        
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 6) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            }); 
+        });
+    </script>
+
+<!---------------------------------------------------------------------------------------------->
+
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+    <header>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="foto/logo.png" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#" id="enlace-carabaya" class="btn-header">Carabaya</a>
+                    <a href="#" id="enlace-turismo" class="btn-header">Turismo</a>
+                    <a href="#" id="enlace-otros" class="btn-header">Otros</a>
+                    <a href="#" id="enlace-video" class="btn-header">Videos</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <div class="textos">
+            <br></br>
+            <h1>BIENVENIDO A CARABAYA </h1>
+            <section class="testimony container">
+                <div class="testimony__grid">
+                    <article class="testimony__item">
+                        <div class="testimony__person">
+                            <img src="foto/Carabaya.jpg" class="testimony__img">
+                            <div class="testimony__texts">
+                                <h3 class="testimony__name">SOBRE CARABAYA</h3>
+                                <p class="testimony__verification">
+                                    La provincia de Carabaya
+                                </p>
+                                <br></br>
+                                <p class="testimony__verification">
+                                    Es una de las trece que conforman el 
+                                    departamento de Puno en el Sur del Perú. Limita por el Norte con 
+                                    el departamento de Madre de Dios; por el Este con la provincia de Sandia; 
+                                    por el Sur la provincia de Azángaro y la provincia de Melgar; y, por el Oeste 
+                                    con el departamento de Cusco.
+                                </p>
+                            </div>
+                        </div>
+                        <p class="testimony__verification">
+                            ATRACTIVOS TURISTICOS DE MACUSANI
+                        </p>
+                        <p class="testimony__verification">
+                            Los nevados, aguas termales, Restos Arqueológicos, etc.
+                        </p>
+                    </article>
+                    <article class="testimony__item">
+                        <h3 class="testimony__name">Lugares turísticos de Carabaya</h3>
+                        <div class="testimony__person">
+                            <div class="testimony__texts">
+                                <img src="foto/Nevado.webp" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur1.jpg" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur2.jpg" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur3.jpg" class="testimony__img">
+                            </div>
+                        </div>
+                        <div class="testimony__person">
+                            <div class="testimony__texts">
+                                <img src="foto/tur4.jpg" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur5.jpg" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur6.jpg" class="testimony__img">
+                            </div>
+                            <div class="testimony__texts">
+                                <img src="foto/tur7.jpg" class="testimony__img">
+                            </div>
+                        </div>
+                        <p class="testimony__verification">
+                            Te invito a develar los misterios y encantos de 
+                            Carabaya en Puno, más allá de lago Titicaca
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </header>
+    
+    <main>
+        <!-----------------------INFORMACIÓN BÁSICA DE CARABAYA ---------------------->
+        <section class="work contenedor" id="carabaya">
+            <h3>CARABAYA</h3>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='Presentacion'>Turismo</li>
+                    <li class="filter" data-nombre='Ofrece'>¿Qué ofrece?</li>
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work Presentacion">
+                  <br></br>
+                    <h4>Carabaya – Pueblo que refleja riqueza natural y atractivos históricos</h4>
+                    <div class="contenedor-servicio">
+                        <div class="checklist-servicio">
+                          <h4>
+                            <br>Carabaya, declarado Patrimonio 
+                            Cultural De La Humanidad por la UNESCO en el año 2008. Inmerso entre 
+                            la recóndita cordillera de Carabaya y los límites a la selva de Tambopata, 
+                            se devela la misteriosa historia de la provincia de Carabaya en Puno, Perú.</br>
+
+                            <br>El turismo en Carabaya destaca por ofrecer una tierra de parajes bellos e 
+                            inexplorados, fuente de riqueza mística y legendaria, donde la helada puna 
+                            se va tornando en selva exuberante. La majestuosidad de la naturaleza se hace 
+                            presente en cada una de sus actividades, siguiendo el armonioso pacto de 
+                            reciprocidad con la Pachamama.</br>
+
+                            <br>Carabaya está ubicada al norte del lago Titicaca, aproximadamente a cuatro 
+                            horas del aeropuerto de Juliaca. Está estratégicamente integrada por diez 
+                            distritos pertenecientes a distintas zonas ecológicas: San Gaban, Ollachea, 
+                            Corani, Ayapata, Coasa, Ituata, Crucero, Usicayos, Ajoyani y Macusani. 
+                            Cada uno de ellos con sus propios lugares arqueológicos.</br>
+                          </h4>
+                        </div>
+
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <img src="foto/macusani.jpg" alt="">
+                                <img src="foto/ituata.jpg" alt="">
+                                <br></br>
+                                <img src="foto/corani.jpg" alt="">
+                                <img src="foto/coasa.jpg" alt="">
+                                <br></br>
+                                <img src="foto/ayapata.jpg" alt="">
+                                <img src="foto/ollachea.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-work Ofrece">
+                    <h4>¿QUÉ OFRECE EL TURISMO EN CARABAYA?</h4>
+                    <div class="contenedor-servicio">
+                        <div class="checklist-servicio">
+                            <h4>ATRACTIVOS TURÍSTICOS</h4>
+                            <h4>Geográficamente, Carabaya es una ciudad rica 
+                                en cumbres nevadas, venerados y sagrados apus tutelares. 
+                                Incomparables caídas de agua cristalina invitan al 
+                                placer inmersa entre cañones; ríos, quebradas e inmensas 
+                                lagunas a una altura de casi 5000 metros de altitud.</h4>
+                                <img src="foto/tur4.jpg" alt=""> <img src="foto/laguna.webp" alt="">    
+                            <br></br>
+                            <h4>Carabaya es reconocida por tener el mejor hábitat de auquénidos, 
+                                sobresaliendo la alpaca. A demás, tienen la más alta calidad de 
+                                finas razas de alpacas y llamas.</h4>
+                                <img src="foto/alpaca.jpg" alt=""> <img src="foto/llama.jpg" alt="">
+                            <br></br>
+                            
+                        </div>
+                        <div class="checklist-servicio">
+                            <h4>ATRACTIVOS TURÍSTICOS</h4>
+                            <h4>Nevados</h4>
+                            <h4>Allincápac, Chichiccápac, Kenamari, Achasiri,  Aricoma, 
+                                Cañón de Toqa</h4>
+                                <img src="foto/allin.jpg" alt=""> <img src="foto/chichicapac.jpg" alt="">    
+                            <br></br>
+                            <h4>Aguas termales</h4>
+                            <h4>Aguas Termales de YuracUnu.- A los pies de las minas de Antimonio 
+                                en el lugar denominando YuracUnu en la comunidad de Huaylluma.</h4>
+                            <br></br>
+                            <h4>Restoa Arqueológicos</h4>
+                            <h4>Ruinas de Pitumarca, Ruinas de Phusa, Pinturas Rupestres</h4>
+                                <img src="foto/pitumarca.jpg" alt=""> <img src="foto/pintura.jpg" alt="">
+                            <br></br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----------------------CARRUSEL COLORADO---------------------->
+        <!------------------SEGUNDO SLIDER - Experiencia laboral---------------------------------------------->
+        <section class="team contenedor" id="turismo">
+            <h3>LUGARES MAS VISITADOS EN CARBAYA</h3>
+            <p class="after"> </p>
+            <div class="slider">
+                <ul>
+                    <li>
+                        <h4>NEVADOS</h4>
+                        <p>Allinccapac en la comunidad de Pacaje</p>
+                        <img src="foto/Allincapac.jpg" alt=""> 
+                        <img src="foto/Allinkapac.jpg" alt="">
+                    </li>
+                    <li>
+                        <h4>NEVADOS</h4>
+                        <p>Chichiccapac en la comunidad de Pacaje</p>
+                        <img src="foto/chichicapac.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>NEVADOS</h4>
+                        <p>Allinccapac en la comunidad de Ajoyani</p>
+                        <img src="foto/quenamari.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>NEVADOS</h4>
+                        <p>Achasiri Nevado majestuoso en el distrito de Coasa</p>
+                        <img src="foto/achasiri.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>NEVADOS</h4>
+                        <p>Aricoma Cumbre nevada en el distrito de Crucero.</p>
+                        <img src="foto/aricoma.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>AGUAS TERMALES</h4>
+                        <p>YuracUnu en la comunidad de Huaylluma</p>
+                        <img src="foto/termales.jpg" alt=""> 
+                              
+                    </li>
+                    <li>
+                        <h4>LUGARES ARQUEOLÓLICOS</h4>
+                        <p>Ruinas de Pitumarca</p>
+                        <img src="foto/pitumarca.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>LUGARES ARQUEOLÓLICOS</h4>
+                        <p>Bosque de Rocas</p>
+                        <img src="foto/rocas.jpg" alt=""> 
+                         
+                    </li>
+                    <li>
+                        <h4>LUGARES ARQUEOLÓLICOS</h4>
+                        <p>Pintura Rpestre</p>
+                        <img src="foto/pintura.jpg" alt=""> 
+                         
+                    </li>
+                </ul>
+                
+            </div>
+        </section>
+
+        <!--------------- OTROS ATRACTIVOS TURÍSTICOS ---------------------------------->
+        <section class="work contenedor" id="otros">
+            <h3>OTROS ATRACTIVOS DE LA PROVINCIA DE CARABAYA</h3>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='python'>Platos</li>
+                    <li class="filter" data-nombre='java'>Danzas</li>
+                    <li class="filter" data-nombre='c++'>Fecasam</li>
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work python">
+                    <div class="img-work">
+                        <table border="3" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 20%"/>
+                                <col style="width: 40%"/>
+                                <col style="width: 40%"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">NOMBRE DEL PLATO</th>
+                                    <th colspan="2">PLATOS TÍPICOS DE LA PROVINCIA DE CARABAYA</th>
+                                </tr>
+                                <tr>
+                                    <th>DESCRIPCION</th>
+                                    <th>IMAGEN</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Estos son los paltos típicos más recomendados de la provincia de carbaya</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <th>Chairo</th>
+                                    <td>Lave bien la quinua y sancóchela en agua por 10 minutos. Ralle la chancaca y póngala 
+                                        en una olla a fuego medio con canela, clavo y agua que lo cubra, hasta formar un almíbar suave</td>
+                                    <td>
+                                        <img src="foto/chairo.jpg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Chicharron de Alpaca</th>
+                                    <td>Es un delicioso y nutritivo potaje de Puno. Primero se cuece la carne hasta que se consume el agua, luego con la misma grasa se dora. Se sirve con chuño, papa y maíz serrano tostado (cancha serrana). Algunas veces se sirve con salsa criolla.
+                                        La carne de alpaca es reconocida como uno de los alimentos más nutritivos, pues posee 22% de proteínas, 56 miligramos de colesterol por cada 100 gramos de carne y un contenido graso de 3% por lo que es considerada un producto light por excelencia.
+                                        Actualmente se consume también entre las comidas de Cusco, Cajamarca y otras regiones.</td>
+                                    <td>
+                                        <img src="foto/chicharron1.jpg" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="cont-work java">
+                    <div class="img-work">
+                        <table border="3" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 20%"/>
+                                <col style="width: 40%"/>
+                                <col style="width: 40%"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">NOMBRE DE LAS DANZAS</th>
+                                    <th colspan="2">ALGUNAS DANZAS TÍPICAS DE LA PROVINCIA DE CARABAYA</th>
+                                </tr>
+                                <tr>
+                                    <th>DESCRIPCION</th>
+                                    <th>IMAGEN</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Estos son las Danzas mas comunes de la provincia de CARABAYA
+                                        , los cuales se representan en festivales de Danza o en agunas costumbres de la zona, 
+                                        También tenemos otros otras danzas como la Pandilla, los Huakahuakas, kaitotiñiy, entre otros.
+                                    </td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <th>Unkaku</th>
+                                    <td>Unkaku sería un derivado del quechua unku, el que hace referencia a la prenda 
+                                        parecida a una túnica hecha de fibra de alpaca o de vicuña usada por los hombres 
+                                        que habitaron los Andes del Perú.
+                                    </td>
+                                    <td>
+                                        <img src="foto/UNKAKUS.jpg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Wifala</th>
+                                    <td>El término wifala, por un lado, está vinculado tradicionalmente a interjecciones o 
+                                        exclamaciones de origen quechua que describen entusiasmo, alegría y goce de los danzantes
+                                    </td>
+                                    <td>
+                                        <img src="foto/wifala.jpg" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="cont-work1 c++">
+                    <div class="textos-work">
+                        <h4>FERIA DE CAMÉLIDOS SUDAMERICANOS</h4>
+                    </div>
+                    <div class="img-work">
+                        <img src="foto/Fecasam.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!---------------------- CARRUSEL: VIDEOS DE YOUTUBE ------------------------------------>
+    <footer id="video">
+        <h2>Los videos más resaltantes sobre el turismo de Carabaya</h2>
+        <div class="card">
+            <div id="carrusel">
+                <a href="#" class="left-arrow"><img src="img/left-arrow.png" /></a>
+                <a href="#" class="right-arrow"><img src="img/right-arrow.png" /></a>
+                <div class="carrusel">
+                    <div class="product" id="product_0">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/SbteIg16nuQ"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_1">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/_CeSPXQNPP0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_2">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/wWGXOci5ERg"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_3">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/4TI-olt5Slg"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_4">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/ig7yTxarNvQ"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_5">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/QM9ybfLgfwU"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_6">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/65834qRYVGo"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_7">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/t4XdKbd_IzU"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_8">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/mEjSazj0QO4"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_9">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/RrOlS1vM99g"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_10">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/_VTcMNSQoG8"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_11">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/_-o4vDCad24"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
+</html>
